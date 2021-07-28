@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+    <title>EASTER EGG</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bowlby+One+SC&family=Holtwood+One+SC&family=Montserrat:wght@500&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        body,h1,h2,h3,span{font-family: 'Holtwood One SC', serif;}
+        h4,h5,h6,p,a,div,select,button  {font-family: 'Montserrat', sans-serif;}
+
+        body, html {
+          height: 100%;
+          line-height: 1.8;
+
+        }
+
+        /* Full height image header */
+        .bgimg-1 {
+          background-position: center;
+          background-size: cover;
+          background-image: url("static/images/castle.jpg");
+          min-height: 100%;
+        }
+
+        .w3-bar .w3-button { padding:16px; }
+        .w3-jumbo { font-size:95px!important;}
+        .w3-large { font-size:40px!important;}
+
+        select {
+        appearance: none; -webkit-appearance: none; -moz-appearance: none;
+        width:350px; height: 60px; padding:3px; font-size: 25px;
+        border:1px solid #ccc; background-color: rgb(0 0 0 / 20%); color: white;
+        no-repeat 95% 50%; border-radius:4px;
+        }
+        select::-ms-expand {display: none;}
+
+        .w3-black, .w3-hover-black:hover {
+        color: #fff!important; background-color: #1b1a1aa3 !important; border-radius:4px;
+        }
+        form { display: inline;}
+
+
+    </style>
+
+    <!-- Home Container -->
+    <div class="bgimg-1 w3-display-container w3-grayscale-min" id="home">
+        <a href="/info">
+          <i class="fa fa-align-justify" style="font-size: 50px; padding: 30px 30px;"></i>
+        </a>
+
+      <div class="w3-display-left w3-text-white" style="padding:48px; text-align:center; position:sticky;">
+        <span class="w3-jumbo w3-hide-small">Welcome to EASTER EGG</span><br>
+        <h2 class="w3-large">Analysis of mobile applications by country</h2>
+        <form name="search" action="/analysis" method="GET">
+        <div class="w3-input-group w3-hover-opacity-off " style="display:inline-flex; flex-direction: row;">
+            <select name="nation" style="padding: 1px 20px! important;">
+                <option value="" disabled selected hidden>Choose Country</option>
+                <option value="Australia">Australia</option><option value="Austria">Austria</option><option value="Belgium">Belgium</option><option value="Brazil">Brazil</option>
+                <option value="Chile">Chile</option><option value="Croatia">Croatia</option><option value="Czech Republic">Czech Republic</option><option value="Finland">Finland</option>
+                <option value="France">France</option><option value="Germany">Germany</option><option value="Egypt">Egypt</option><option value="Greece">Greece</option>
+                <option value="Hong Kong">Hong Kong</option><option value="Hungary">Hungary</option><option value="India">India</option><option value="Indonesia">Indonesia</option>
+                <option value="Iraq">Iraq</option><option value="Ireland">Ireland</option><option value="Israel">Israel</option><option value="Italy">Italy</option>
+                <option value="Japan">Japan</option><option value="Malaysia">Malaysia</option><option value="Mexico">Mexico</option><option value="Netherlands">Netherlands</option>
+                <option value="New Zealand">New Zealand</option><option value="Philippines">Philippines</option><option value="Poland">Poland</option><option value="Portugal">Portugal</option>
+                <option value="Russia">Russia</option><option value="South Korea">South Korea</option><option value="Spain">Spain</option><option value="Sweden">Sweden</option>
+                <option value="Switzerland">Switzerland</option><option value="Taiwan">Taiwan</option><option value="Thailand">Thailand</option><option value="Turkey">Turkey</option>
+                <option value="Ukraine">Ukraine</option><option value="United Kingdom">United Kingdom</option><option value="Uruguay">Uruguay</option><option value="Vietnam">Vietnam</option>
+            </select>
+
+
+          <button type="submit" class="w3-btn w3-black w3-border w3-round" style="width:150px; height:60px; font-size:25px;" onclick="location='/analysis'">Search</button>
+        </div>
+      </form>
+<!--        <p><a href="#about" class="w3-button w3-white w3-padding-large w3-large w3-margin-top w3-opacity w3-hover-opacity-off">Learn more and start today</a></p>-->
+      </div>
+    </div>
+
+
+    <script>
+    function w3_open() {
+    document.getElementById("mySidebar").style.display = "block";
+}
+function w3_close() {
+    document.getElementById("mySidebar").style.display = "none";
+}
+
+
+    // Modal Image Gallery
+    function onClick(element) {
+      document.getElementById("img01").src = element.src;
+      document.getElementById("modal01").style.display = "block";
+      var captionText = document.getElementById("caption");
+      captionText.innerHTML = element.alt;
+    }
+
+
+    // Toggle between showing and hiding the sidebar when clicking the menu icon
+    var mySidebar = document.getElementById("mySidebar");
+
+    function w3_open() {
+      if (mySidebar.style.display === 'block') {
+        mySidebar.style.display = 'none';
+      } else {
+        mySidebar.style.display = 'block';
+      }
+    }
+
+    // Close the sidebar with the close button
+    function w3_close() {
+        mySidebar.style.display = "none";
+    }
+    </script>
+
+</html>
